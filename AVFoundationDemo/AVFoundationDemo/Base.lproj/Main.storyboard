@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wgz-bj-FdP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1244" y="129"/>
+            <point key="canvasLocation" x="-268" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -39,14 +39,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxs-hT-gvF">
                                         <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
                                         <state key="normal" title="视频接续"/>
+                                        <connections>
+                                            <action selector="onVideoQueueBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BHk-UZ-hSe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-44-DJ4">
                                         <rect key="frame" x="0.0" y="60" width="62" height="30"/>
                                         <state key="normal" title="视频多路"/>
+                                        <connections>
+                                            <action selector="onVideosMultipathBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hvl-1P-6u1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xh6-Ry-ZQb">
                                         <rect key="frame" x="0.0" y="120" width="62" height="30"/>
                                         <state key="normal" title="视频水印"/>
+                                        <connections>
+                                            <action selector="onVideoWatermarkBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xmX-a7-HMA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -62,6 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="406" y="134"/>
         </scene>
     </scenes>
 </document>

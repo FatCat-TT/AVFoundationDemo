@@ -68,4 +68,7 @@
     
     AVPlayerItem *item = [[VideoWatermark new] makePlayerItemWithAsset:asset1 andWatermark:asset2];
     [self play:item];
-}@end
+}
+
+
+@end
