@@ -34,25 +34,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1Z7-rq-BdW">
-                                <rect key="frame" x="156.5" y="258.5" width="62" height="150"/>
+                                <rect key="frame" x="141.5" y="258.5" width="92" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxs-hT-gvF">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                        <rect key="frame" x="15" y="0.0" width="62" height="30"/>
                                         <state key="normal" title="视频接续"/>
                                         <connections>
                                             <action selector="onVideoQueueBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BHk-UZ-hSe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-44-DJ4">
-                                        <rect key="frame" x="0.0" y="60" width="62" height="30"/>
+                                        <rect key="frame" x="15" y="60" width="62" height="30"/>
                                         <state key="normal" title="视频多路"/>
                                         <connections>
                                             <action selector="onVideosMultipathBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hvl-1P-6u1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xh6-Ry-ZQb">
-                                        <rect key="frame" x="0.0" y="120" width="62" height="30"/>
-                                        <state key="normal" title="视频水印"/>
+                                        <rect key="frame" x="0.0" y="120" width="92" height="30"/>
+                                        <state key="normal" title="自动放大水印"/>
                                         <connections>
                                             <action selector="onVideoWatermarkBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xmX-a7-HMA"/>
                                         </connections>

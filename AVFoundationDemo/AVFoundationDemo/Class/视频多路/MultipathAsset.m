@@ -10,4 +10,7 @@
 
 @implementation MultipathAsset
 
+- (CGSize)size {
+    return self.asset.naturalSize;
+}
 @end

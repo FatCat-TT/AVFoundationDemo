@@ -54,9 +54,13 @@
     
     MultipathAsset *asset2 = [[MultipathAsset alloc] init];
     asset2.asset = [AVAsset assetWithURL:url2];
-    asset2.origin = CGPointMake(980, 0);
+    asset2.origin = CGPointMake(asset1.size.width, 0);
     
-    AVPlayerItem *item = [[VideoMultipath new] makePlayerItemWithAssets:@[asset1, asset2] size:CGSizeMake(980 * 2, 548)];
+    CGFloat w = asset1.size.width + asset2.size.width;
+    CGFloat h = MAX(asset1.size.height, asset2.size.height);
+    CGSize videoSize = CGSizeMake(w, h);
+    
+    AVPlayerItem *item = [[VideoMultipath new] makePlayerItemWithAssets:@[asset1, asset2] size:videoSize];
     [self play:item];
 }
 

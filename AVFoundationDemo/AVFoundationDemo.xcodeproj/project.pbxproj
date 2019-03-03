@@ -114,9 +114,9 @@
 		1808BC4D222BA6780087C179 /* 视频多路 */ = {
 			isa = PBXGroup;
 			children = (
+				1808BC50222BA6780087C179 /* MultipathAsset.h */,
 				1808BC4E222BA6780087C179 /* MultipathAsset.m */,
 				1808BC4F222BA6780087C179 /* VideoMultipath.h */,
-				1808BC50222BA6780087C179 /* MultipathAsset.h */,
 				1808BC51222BA6780087C179 /* VideoMultipath.m */,
 			);
 			path = "视频多路";
@@ -134,8 +134,8 @@
 		1808BC55222BA6780087C179 /* 视频水印 */ = {
 			isa = PBXGroup;
 			children = (
-				1808BC56222BA6780087C179 /* VideoWatermark.m */,
 				1808BC57222BA6780087C179 /* VideoWatermark.h */,
+				1808BC56222BA6780087C179 /* VideoWatermark.m */,
 			);
 			path = "视频水印";
 			sourceTree = "<group>";

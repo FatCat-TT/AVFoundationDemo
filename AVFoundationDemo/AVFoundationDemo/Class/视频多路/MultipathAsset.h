@@ -12,4 +12,5 @@
 @property (nonatomic) AVAsset *asset;
 @property (nonatomic) CGPoint origin;
 
+- (CGSize)size;
 @end
