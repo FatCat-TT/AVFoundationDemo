@@ -44,23 +44,21 @@
 }
 
 - (IBAction)onVideosMultipathBtnClick:(id)sender {
-    //构造一个 w=980*2  h=548的 左边是1.mov 右边是2.mov的视频
-    NSURL *url1 = [[NSBundle mainBundle] URLForResource:VIDEO1 withExtension:nil];
-    NSURL *url2 = [[NSBundle mainBundle] URLForResource:VIDEO2 withExtension:nil];
+    //构造一个 w=980*3 h=548*3
+    NSMutableArray *videos = [NSMutableArray array];
     
-    MultipathAsset *asset1 = [[MultipathAsset alloc] init];
-    asset1.asset = [AVAsset assetWithURL:url1];
-    asset1.origin = CGPointZero;
+    NSURL *url = [[NSBundle mainBundle] URLForResource:VIDEO1 withExtension:nil];
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            MultipathAsset *asset = [[MultipathAsset alloc] init];
+            asset.asset = [AVAsset assetWithURL:url];
+            asset.origin = CGPointMake(i * 980, j * 548);
+            [videos addObject:asset];
+        }
+    }
+    CGSize videoSize = CGSizeMake(980 * 3, 548 * 3);
     
-    MultipathAsset *asset2 = [[MultipathAsset alloc] init];
-    asset2.asset = [AVAsset assetWithURL:url2];
-    asset2.origin = CGPointMake(asset1.size.width, 0);
-    
-    CGFloat w = asset1.size.width + asset2.size.width;
-    CGFloat h = MAX(asset1.size.height, asset2.size.height);
-    CGSize videoSize = CGSizeMake(w, h);
-    
-    AVPlayerItem *item = [[VideoMultipath new] makePlayerItemWithAssets:@[asset1, asset2] size:videoSize];
+    AVPlayerItem *item = [[VideoMultipath new] makePlayerItemWithAssets:videos size:videoSize];
     [self play:item];
 }
 

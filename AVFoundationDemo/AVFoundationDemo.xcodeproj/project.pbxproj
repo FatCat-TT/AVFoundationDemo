@@ -125,8 +125,8 @@
 		1808BC52222BA6780087C179 /* 视频接续 */ = {
 			isa = PBXGroup;
 			children = (
-				1808BC53222BA6780087C179 /* VideoQueue.m */,
 				1808BC54222BA6780087C179 /* VideoQueue.h */,
+				1808BC53222BA6780087C179 /* VideoQueue.m */,
 			);
 			path = "视频接续";
 			sourceTree = "<group>";
