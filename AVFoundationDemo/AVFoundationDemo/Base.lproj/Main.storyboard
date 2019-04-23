@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JqG-Y6-9e1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JqG-Y6-9e1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,37 +33,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1Z7-rq-BdW">
-                                <rect key="frame" x="141.5" y="258.5" width="92" height="150"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxs-hT-gvF">
-                                        <rect key="frame" x="15" y="0.0" width="62" height="30"/>
-                                        <state key="normal" title="视频接续"/>
-                                        <connections>
-                                            <action selector="onVideoQueueBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BHk-UZ-hSe"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-44-DJ4">
-                                        <rect key="frame" x="15" y="60" width="62" height="30"/>
-                                        <state key="normal" title="视频多路"/>
-                                        <connections>
-                                            <action selector="onVideosMultipathBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hvl-1P-6u1"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xh6-Ry-ZQb">
-                                        <rect key="frame" x="0.0" y="120" width="92" height="30"/>
-                                        <state key="normal" title="自动放大水印"/>
-                                        <connections>
-                                            <action selector="onVideoWatermarkBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xmX-a7-HMA"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70s-ZM-Oxi">
+                                <rect key="frame" x="10" y="50" width="62" height="30"/>
+                                <state key="normal" title="静态水印"/>
+                                <connections>
+                                    <action selector="onImgWMBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4mW-Du-eoi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raj-Ah-6JT">
+                                <rect key="frame" x="263" y="50" width="102" height="30"/>
+                                <state key="normal" title="静态+动画水印"/>
+                                <connections>
+                                    <action selector="onImgAnimWMBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V6h-FJ-hpu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUp-aS-gQU">
+                                <rect key="frame" x="10" y="100" width="62" height="30"/>
+                                <state key="normal" title="视频水印"/>
+                                <connections>
+                                    <action selector="onVideoWMBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u0h-uw-bPP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xh6-Ry-ZQb">
+                                <rect key="frame" x="263" y="100" width="102" height="30"/>
+                                <state key="normal" title="视频+动画水印"/>
+                                <connections>
+                                    <action selector="onVideoAnimWMBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A2w-br-PAE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxs-hT-gvF">
+                                <rect key="frame" x="10" y="150" width="62" height="30"/>
+                                <state key="normal" title="视频接续"/>
+                                <connections>
+                                    <action selector="onVideoQueueBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BHk-UZ-hSe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-44-DJ4">
+                                <rect key="frame" x="156.5" y="150" width="62" height="30"/>
+                                <state key="normal" title="视频多路"/>
+                                <connections>
+                                    <action selector="onVideosMultipathBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hvl-1P-6u1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9og-y6-uki">
+                                <rect key="frame" x="257" y="150" width="108" height="30"/>
+                                <state key="normal" title="新视频动画水印"/>
+                                <connections>
+                                    <action selector="onVideoNewAnimBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="34v-vt-kdU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1Z7-rq-BdW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ayV-QO-KMj"/>
-                            <constraint firstItem="1Z7-rq-BdW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rPo-NC-v0n"/>
+                            <constraint firstItem="fxs-hT-gvF" firstAttribute="top" secondItem="VUp-aS-gQU" secondAttribute="bottom" constant="20" id="0ak-so-R07"/>
+                            <constraint firstItem="qbz-44-DJ4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Ec-VJ-Dkw"/>
+                            <constraint firstItem="9og-y6-uki" firstAttribute="trailing" secondItem="raj-Ah-6JT" secondAttribute="trailing" id="5ry-vZ-Zo5"/>
+                            <constraint firstItem="Xh6-Ry-ZQb" firstAttribute="centerY" secondItem="VUp-aS-gQU" secondAttribute="centerY" id="JIZ-nA-zt3"/>
+                            <constraint firstItem="fxs-hT-gvF" firstAttribute="leading" secondItem="70s-ZM-Oxi" secondAttribute="leading" id="SUM-0r-mFQ"/>
+                            <constraint firstItem="70s-ZM-Oxi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Sb7-eV-asT"/>
+                            <constraint firstItem="VUp-aS-gQU" firstAttribute="leading" secondItem="70s-ZM-Oxi" secondAttribute="leading" id="TFZ-XB-9uw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="raj-Ah-6JT" secondAttribute="trailing" constant="10" id="aE7-mX-s8A"/>
+                            <constraint firstItem="qbz-44-DJ4" firstAttribute="centerY" secondItem="fxs-hT-gvF" secondAttribute="centerY" id="foR-AN-gUr"/>
+                            <constraint firstItem="raj-Ah-6JT" firstAttribute="centerY" secondItem="70s-ZM-Oxi" secondAttribute="centerY" id="gep-rJ-PMr"/>
+                            <constraint firstItem="9og-y6-uki" firstAttribute="centerY" secondItem="fxs-hT-gvF" secondAttribute="centerY" id="ggR-9D-dmH"/>
+                            <constraint firstItem="Xh6-Ry-ZQb" firstAttribute="trailing" secondItem="raj-Ah-6JT" secondAttribute="trailing" id="rOT-KQ-e5r"/>
+                            <constraint firstItem="VUp-aS-gQU" firstAttribute="top" secondItem="70s-ZM-Oxi" secondAttribute="bottom" constant="20" id="wi3-pu-PMK"/>
+                            <constraint firstItem="70s-ZM-Oxi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="zjR-8q-XCI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

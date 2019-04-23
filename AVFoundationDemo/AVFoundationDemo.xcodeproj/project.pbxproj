@@ -19,7 +19,9 @@
 		1808BC58222BA6780087C179 /* MultipathAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808BC4E222BA6780087C179 /* MultipathAsset.m */; };
 		1808BC59222BA6780087C179 /* VideoMultipath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808BC51222BA6780087C179 /* VideoMultipath.m */; };
 		1808BC5A222BA6780087C179 /* VideoQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808BC53222BA6780087C179 /* VideoQueue.m */; };
-		1808BC5B222BA6780087C179 /* VideoWatermark.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808BC56222BA6780087C179 /* VideoWatermark.m */; };
+		18DB0145226EE23B004507CE /* a1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB0144226EE23B004507CE /* a1.png */; };
+		18DB0149226EE2D0004507CE /* VideoWaterMarkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB0148226EE2D0004507CE /* VideoWaterMarkHelper.m */; };
+		18DB0150226EEA67004507CE /* CombineAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB014F226EEA67004507CE /* CombineAsset.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +44,11 @@
 		1808BC51222BA6780087C179 /* VideoMultipath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMultipath.m; sourceTree = "<group>"; };
 		1808BC53222BA6780087C179 /* VideoQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoQueue.m; sourceTree = "<group>"; };
 		1808BC54222BA6780087C179 /* VideoQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoQueue.h; sourceTree = "<group>"; };
-		1808BC56222BA6780087C179 /* VideoWatermark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoWatermark.m; sourceTree = "<group>"; };
-		1808BC57222BA6780087C179 /* VideoWatermark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoWatermark.h; sourceTree = "<group>"; };
+		18DB0144226EE23B004507CE /* a1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a1.png; sourceTree = "<group>"; };
+		18DB0147226EE2D0004507CE /* VideoWaterMarkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoWaterMarkHelper.h; sourceTree = "<group>"; };
+		18DB0148226EE2D0004507CE /* VideoWaterMarkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoWaterMarkHelper.m; sourceTree = "<group>"; };
+		18DB014E226EEA67004507CE /* CombineAsset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CombineAsset.h; sourceTree = "<group>"; };
+		18DB014F226EEA67004507CE /* CombineAsset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CombineAsset.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +99,8 @@
 		1808BC45222BA66E0087C179 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				1808BC46222BA66E0087C179 /* 2.mov */,
-				1808BC47222BA66E0087C179 /* 3.mov */,
-				1808BC48222BA66E0087C179 /* 1.mov */,
+				18DB0143226EE1D1004507CE /* 视频 */,
+				18DB0142226EE1C9004507CE /* 图片 */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -104,9 +108,9 @@
 		1808BC4C222BA6780087C179 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				18DB0146226EE29A004507CE /* 视频水印 */,
 				1808BC4D222BA6780087C179 /* 视频多路 */,
 				1808BC52222BA6780087C179 /* 视频接续 */,
-				1808BC55222BA6780087C179 /* 视频水印 */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -131,13 +135,41 @@
 			path = "视频接续";
 			sourceTree = "<group>";
 		};
-		1808BC55222BA6780087C179 /* 视频水印 */ = {
+		18DB0142226EE1C9004507CE /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
-				1808BC57222BA6780087C179 /* VideoWatermark.h */,
-				1808BC56222BA6780087C179 /* VideoWatermark.m */,
+				18DB0144226EE23B004507CE /* a1.png */,
+			);
+			path = "图片";
+			sourceTree = "<group>";
+		};
+		18DB0143226EE1D1004507CE /* 视频 */ = {
+			isa = PBXGroup;
+			children = (
+				1808BC46222BA66E0087C179 /* 2.mov */,
+				1808BC47222BA66E0087C179 /* 3.mov */,
+				1808BC48222BA66E0087C179 /* 1.mov */,
+			);
+			path = "视频";
+			sourceTree = "<group>";
+		};
+		18DB0146226EE29A004507CE /* 视频水印 */ = {
+			isa = PBXGroup;
+			children = (
+				18DB014A226EEA02004507CE /* Model */,
+				18DB0147226EE2D0004507CE /* VideoWaterMarkHelper.h */,
+				18DB0148226EE2D0004507CE /* VideoWaterMarkHelper.m */,
 			);
 			path = "视频水印";
+			sourceTree = "<group>";
+		};
+		18DB014A226EEA02004507CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18DB014E226EEA67004507CE /* CombineAsset.h */,
+				18DB014F226EEA67004507CE /* CombineAsset.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +235,7 @@
 				1808BC39222BA5F00087C179 /* Assets.xcassets in Resources */,
 				1808BC37222BA5EF0087C179 /* Main.storyboard in Resources */,
 				1808BC49222BA66E0087C179 /* 2.mov in Resources */,
+				18DB0145226EE23B004507CE /* a1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,9 +249,10 @@
 				1808BC59222BA6780087C179 /* VideoMultipath.m in Sources */,
 				1808BC5A222BA6780087C179 /* VideoQueue.m in Sources */,
 				1808BC34222BA5EF0087C179 /* ViewController.m in Sources */,
-				1808BC5B222BA6780087C179 /* VideoWatermark.m in Sources */,
 				1808BC3F222BA5F00087C179 /* main.m in Sources */,
 				1808BC31222BA5EF0087C179 /* AppDelegate.m in Sources */,
+				18DB0149226EE2D0004507CE /* VideoWaterMarkHelper.m in Sources */,
+				18DB0150226EEA67004507CE /* CombineAsset.m in Sources */,
 				1808BC58222BA6780087C179 /* MultipathAsset.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
