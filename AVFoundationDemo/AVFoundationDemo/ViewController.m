@@ -34,13 +34,32 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
+- (void)export:(AVPlayerItem *)item name:(NSString *)name {
+    AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:item.asset presetName:AVAssetExportPresetHighestQuality];
+    if (item.videoComposition) {
+        [session setVideoComposition:item.videoComposition];
+    }
+    NSString *outPath = [NSTemporaryDirectory() stringByAppendingString:name];
+    [session setOutputURL:[NSURL fileURLWithPath:outPath]];
+    [session setOutputFileType:AVFileTypeQuickTimeMovie];
+    [session exportAsynchronouslyWithCompletionHandler:^{
+        if (session.status == AVAssetExportSessionStatusCompleted) {
+            NSLog(@"outpath= %@", outPath);
+        } else {
+            NSLog(@"error= %@",session.error.description);
+        }
+    }];
+}
+
 - (IBAction)onVideoQueueBtnClick:(id)sender {
     NSURL *url1 = [[NSBundle mainBundle] URLForResource:VIDEO1 withExtension:nil];
     NSURL *url2 = [[NSBundle mainBundle] URLForResource:VIDEO2 withExtension:nil];
     AVAsset *asset1 = [AVAsset assetWithURL:url1];
     AVAsset *asset2 = [AVAsset assetWithURL:url2];
     AVPlayerItem *item = [[VideoQueue new] makePlayerItemWithAssets:@[asset1, asset2]];
-    [self play:item];
+    
+//    [self play:item];
+    [self export:item name:@"result1.mov"];
 }
 
 - (IBAction)onVideosMultipathBtnClick:(id)sender {
@@ -59,7 +78,8 @@
     CGSize videoSize = CGSizeMake(980 * 3, 548 * 3);
     
     AVPlayerItem *item = [[VideoMultipath new] makePlayerItemWithAssets:videos size:videoSize];
-    [self play:item];
+//    [self play:item];
+    [self export:item name:@"result2.mov"];
 }
 
 - (IBAction)onVideoWatermarkBtnClick:(id)sender {
@@ -69,7 +89,8 @@
     AVAsset *asset2 = [AVAsset assetWithURL:url2];
     
     AVPlayerItem *item = [[VideoWatermark new] makePlayerItemWithAsset:asset1 andWatermark:asset2];
-    [self play:item];
+//    [self play:item];
+    [self export:item name:@"result3.mov"];
 }
 
 
